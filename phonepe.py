@@ -454,6 +454,8 @@ fig9.update_geos(fitbounds="locations", visible=False)
 
 #Code for streamlit
 
+image_path="C:/Users/visha/Downloads/PhonePe_Logo_PNG1.png"
+st.image(image_path, use_column_width=True)
 st.title(":violet[PHONE PE]")
 with st.sidebar:
     selected = option_menu("FILTER", ['STATE','YEAR','TRANSACTION TYPE','BRANDS','DISTRICT','PINCODE'],
@@ -470,7 +472,6 @@ if selected == "STATE":
                  "even though some states have higher Insurance count they have lower Insurance amount"
                  "and some states have lower Insurance count they have higher Insurance."
                  "States like Tamil Nadu and Kerala are examples of it.")
-
 
   with st.expander("STATE VS REGISTERED USER"):
       st.plotly_chart(fig9)
@@ -544,7 +545,6 @@ if selected == "PINCODE":
 
     with st.expander("PINCODE VS INSURANCE AMOUNT"):
         st.plotly_chart(fig15)
-
 
 
 
